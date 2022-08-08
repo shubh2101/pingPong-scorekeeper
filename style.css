@@ -1,0 +1,29 @@
+h2 {
+  display: inline-block;
+  font-size: 30px;
+  color: #086abf;
+  margin-left: 60px;
+}
+#resetScoreboard {
+  margin-left: 70px;
+  margin-bottom: 50px;
+}
+.extratime {
+  font-weight: 900;
+  background-color: orangered !important;
+  color: white !important;
+}
+#scoreHistory {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#scoreBoard {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  margin-left: 15px;
+}
+

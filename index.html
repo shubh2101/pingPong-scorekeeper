@@ -1,142 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
 
-    <title>Score Keeper</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> />
+  <link rel="stylesheet" href="style.css" />
+  <title>Score Keeper</title>
+</head>
 
-  <body>
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column">
-            <div class="field">
-              <label class="label">Player 1 Name</label>
-              <div class="control">
-                <input
-                  class="input"
-                  type="text"
-                  id="p1Input"
-                  placeholder="Name"
-                />
-              </div>
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="field">
+            <label class="label">Player 1</label>
+            <div class="control">
+              <input class="input" type="text" id="p1Input" placeholder="Name" />
             </div>
-            <div class="field">
-              <label class="label">Player 2 Name</label>
-              <div class="control">
-                <input
-                  class="input"
-                  type="text"
-                  id="p2Input"
-                  placeholder="Name"
-                />
-                <button
-                  class="button is-info is-rounded"
-                  id="confirm2"
-                  type="submit"
-                >
-                  Confirm
-                </button>
-              </div>
-            </div>
-            <div class="resetbtns">
-              <button id="resetNames" class="button is-danger is-rounded">
-                Reset Names
-              </button>
-              <button id="resetAll" class="button is-danger is-rounded">
-                Reset All
+          </div>
+          <div class="field">
+            <label class="label">Player 2</label>
+            <div class="control">
+              <input class="input" type="text" id="p2Input" placeholder="Name" />
+              <button class="button is-info is-rounded" id="confirm2" type="submit">
+                Confirm
               </button>
             </div>
           </div>
+          <div class="resetbtns">
+            <button id="resetNames" class="button is-danger is-rounded">
+              Reset Names
+            </button>
+            <button id="resetAll" class="button is-danger is-rounded">
+              Reset All
+            </button>
+          </div>
+        </div>
 
-          <div class="column is-half">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-2by1">
-                  <img
-                    src="https://brainandmemoryhealth.com/wp-content/uploads/2021/02/Ping_Pong.jpg"
-                    alt=""
-                  />
-                </figure>
-              </div>
-              <header class="card-header">
-                <p class="card-header-title">Ping Pong Score Keeper</p>
-              </header>
-              <div class="card-content">
-                <div class="content">
-                  <h1 class="title is-1">
-                    <span id="p1Display">0</span> to
-                    <span id="p2Display">0</span>
-                  </h1>
-                  <p class="subtitles">Use the buttons below to keep score</p>
-                  <label for="playingto" class="label is-inline is-large"
-                    >Playing To</label
-                  >
-                  <div class="select is-rounded">
-                    <select name="" id="playto">
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>
-                  </div>
+        <div class="column is-half">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <img src="https://brainandmemoryhealth.com/wp-content/uploads/2021/02/Ping_Pong.jpg" alt="" />
+              </figure>
+            </div>
+            <header class="card-header">
+              <p class="card-header-title">Ping Pong Score Keeper</p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                <h1 class="title is-1">
+                  <span id="p1Display">0</span> to
+                  <span id="p2Display">0</span>
+                </h1>
+                <p class="subtitles">Use the buttons below to keep score</p>
+                <label for="playingto" class="label is-inline is-large">Playing To</label>
+                <div class="select is-rounded">
+                  <select name="" id="playto">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
                 </div>
               </div>
-              <footer class="card-footer">
-                <button
-                  id="p1Button"
-                  class="is-primary button card-footer-item is-large"
-                >
-                  +1 Player One
-                </button>
-                <button
-                  id="p2Button"
-                  class="is-primary button card-footer-item is-info is-large"
-                >
-                  +1 Player Two
-                </button>
-                <button
-                  id="reset"
-                  class="is-primary button card-footer-item is-danger is-large"
-                >
-                  Reset
-                </button>
-              </footer>
             </div>
+            <footer class="card-footer ">
+              <button id="p1Button" class="is-primary button card-footer-item  is-responsive">
+                +1 Player One
+              </button>
+              <button id="p2Button" class="is-primary button card-footer-item is-info  is-responsive">
+                +1 Player Two
+              </button>
+              <button id="reset" class="is-primary button card-footer-item is-danger  is-responsive">
+                Reset
+              </button>
+            </footer>
           </div>
-          <div class="column">
-            <h2>SCOREBOARD</h2>
-            <button id="resetScoreboard" class="button is-danger is-rounded">
-              Reset Scoreboard
-            </button>
+        </div>
+        <div class="column">
+          <h2>SCOREBOARD</h2>
+          <button id="resetScoreboard" class="button is-danger is-rounded">
+            Reset Scoreboard
+          </button>
 
-            <div id="scoreHistory">
-              <span>Game</span>
-              <span>Score</span>
-              <span>Winner</span>
-            </div>
-            <div id="scoreBoard">
-              <ul id="gameCountList"></ul>
-              <ul id="scoreList"></ul>
-              <ul id="winnerList"></ul>
-            </div>
+          <div id="scoreHistory">
+            <span>Game</span>
+            <span>Score</span>
+            <span>Winner</span>
+          </div>
+          <div id="scoreBoard">
+            <ul id="gameCountList"></ul>
+            <ul id="scoreList"></ul>
+            <ul id="winnerList"></ul>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script src="app.js"></script>
-  </body>
+  <script src="app.js"></script>
+</body>
+
 </html>
